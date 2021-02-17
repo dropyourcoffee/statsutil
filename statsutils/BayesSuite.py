@@ -55,7 +55,7 @@ class BayesSuite(object):
 
     def print(self):
         """ 확률순으로 출력하기. """
-        for val, prob in sorted(self.d.items()):
+        for val, prob in sorted(self.d.items(), key=lambda i:i[1], reverse=True):
             print(val, prob)
 
     @property
